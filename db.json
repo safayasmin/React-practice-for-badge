@@ -7,16 +7,16 @@
     {
       "name": "shifa",
       "id": "pNRMC8R2uEE"
-    },
-    {
-      "name": "ashmil",
-      "id": "zZ8C3qxOkYU"
     }
   ],
   "trash": [
     {
       "name": "shahma",
       "id": "widJqFO9lmw"
+    },
+    {
+      "name": "ashmil",
+      "id": "8kHmJ5Q_AT0"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
