@@ -1,17 +1,23 @@
-import React, { lazy, Suspense } from 'react'
+import React, { useMemo, useState } from 'react'
 
-
-const Safa=lazy(()=>import("./component/Child"));
 const App = () => {
+  const [count,setcount]=useState(0);
+  const squar=useMemo(()=>{
+    console.log("calculating.....");
+    return count*count;
+  },[count]);
+  
   return (
     <div>
-      <h1>Home page</h1>
-      <Suspense fallback={<h1>loding......</h1>}>
-      <Safa />
-      </Suspense>
-   
+      <h1>usememo eg code </h1>
+      <h1>{count}</h1>
+      <h1>{squar}</h1>
+      <button onClick={()=>setcount(count+1)}>+</button>
+      <button onClick={()=>setcount(count-1)}>-</button>
     </div>
   )
 }
 
 export default App
+
+
