@@ -1,19 +1,12 @@
-import React, { useRef } from 'react'
-
-const Todo = () => {
-  const count=useRef(0);
-
-  const handlecount=()=>{
-    count.curent=count.curent+1;
-    console.log(count.current)
+import React ,{useReducer} from 'react'
+  const Reducer=(state,action)=>{
+    if(action.type==="inc"){
+      return {count:state.count+1};
+    }
+    if(action.type==="dec"){
+      return {count:state.count-1};
+    }
+    return state;
   }
-  return (
-    <div>
-      <h1 className='text-2xl font-bold'>ref is</h1>
-      <button className='border py-4 px-3' onClick={handlecount}>add</button>
-      
-    </div>
-  )
-}
+ export default Reducer;
 
-export default Todo
