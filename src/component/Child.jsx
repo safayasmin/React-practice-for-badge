@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Child =React.memo(function Child({name}){
-     console.log("name created");
-     return <h1>name is {name}</h1>
-})
+const Child = () => {
+  return (
+    <div>
+      <h1>about pages</h1>
+    </div>
+  )
+}
 
 export default Child

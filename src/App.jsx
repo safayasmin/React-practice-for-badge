@@ -1,16 +1,15 @@
+import React, { lazy, Suspense } from 'react'
 
-import React, { useState } from 'react'
-import Child from './component/Child'
 
+const Safa=lazy(()=>import("./component/Child"));
 const App = () => {
-  const [count,setcount]=useState(0)
-  const [name]=useState("shifaaaa")
   return (
     <div>
-      <h1>{count}</h1>
-      <button onClick={()=>setcount(count+1)}>+</button>
-      <button onClick={()=>setcount(count-1)}>-</button>
-      <Child name={name} />
+      <h1>Home page</h1>
+      <Suspense fallback={<h1>loding......</h1>}>
+      <Safa />
+      </Suspense>
+   
     </div>
   )
 }
