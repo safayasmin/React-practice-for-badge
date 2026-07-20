@@ -1,20 +1,16 @@
-import React from 'react'
-import {BrowserRouter,Route,Routes} from 'react-router-dom'
-import Home  from './component/Home'
-import User from './component/User'
 
+import React, { useState } from 'react'
+import Child from './component/Child'
 
 const App = () => {
+  const [count,setcount]=useState(0)
+  const [name]=useState("shifaaaa")
   return (
     <div>
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />}/>
-       <Route path="/home" element={<Home />}/>
-       <Route path='/user/:id' element={<User />}/>
-    </Routes>
-    </BrowserRouter>
-      
+      <h1>{count}</h1>
+      <button onClick={()=>setcount(count+1)}>+</button>
+      <button onClick={()=>setcount(count-1)}>-</button>
+      <Child name={name} />
     </div>
   )
 }
