@@ -1,22 +1,17 @@
 {
-  "users": [
+  "products": [
+    {
+      "name": "Rose",
+      "price": 500,
+      "id": "oL-7Z_M7rXY"
+    },
     {
       "name": "safa",
-      "id": "2AQbxZ_6ZoA"
+      "id": "K3mU-wQFan8"
     },
     {
-      "name": "shifa",
-      "id": "pNRMC8R2uEE"
-    }
-  ],
-  "trash": [
-    {
-      "name": "shahma",
-      "id": "widJqFO9lmw"
-    },
-    {
-      "name": "ashmil",
-      "id": "8kHmJ5Q_AT0"
+      "name": "fathima",
+      "id": "keLf3o0OXmw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
